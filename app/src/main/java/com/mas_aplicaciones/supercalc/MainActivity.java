@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     Display.append(memoria);
                     memoria = "";
-                    botonMemoria.setText("MEM");
+                    botonMemoria.setText(R.string.Memoria);
                 }
             }
         });
