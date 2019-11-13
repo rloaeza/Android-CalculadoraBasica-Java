@@ -3,6 +3,7 @@ package com.mas_aplicaciones.supercalc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Display = findViewById(R.id.Display);
-
         final Button botonMemoria = findViewById(R.id.botonMem);
         botonMemoria.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public void agregarValor(View vista) {
@@ -62,17 +61,18 @@ public class MainActivity extends AppCompatActivity {
         if( texto.isEmpty()  ) {
             return;
         }
-        if( texto.endsWith(".") ) {
+        Double d = new Expression(texto+".0").calculate();
+
+        if( d.isNaN() ) {
             return;
         }
-
         Display.append(".");
     }
     public void limpiarTodo(View vista) {
         if( !memoria.isEmpty() ) {
             memoria = "";
             Button botonMemoria = findViewById(R.id.botonMem);
-            botonMemoria.setText("MEM");
+            botonMemoria.setText(R.string.Memoria);
         }
         Display.setText("");
     }
