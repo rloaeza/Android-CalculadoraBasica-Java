@@ -19,7 +19,7 @@
     <string name="coseno">cos</string>
     <string name="tangente">tan</string>
     <string name="division">/</string>
-    <string name="Raiz">Raíz</string>
+    <string name="Raiz">sqrt</string>
     <string name="Factorial">!</string>
     <string name="Potencia">^</string>
     <string name="LimpiarTodo">C. A.</string>

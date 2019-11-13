@@ -3,7 +3,6 @@ package com.mas_aplicaciones.supercalc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -67,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         Display.append(".");
+
+
     }
     public void limpiarTodo(View vista) {
         if( !memoria.isEmpty() ) {
