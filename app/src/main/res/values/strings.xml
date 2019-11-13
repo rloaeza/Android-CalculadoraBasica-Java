@@ -25,4 +25,9 @@
     <string name="LimpiarTodo">C. A.</string>
     <string name="Memoria">Mem</string>
     <string name="LimpiarEntrada">C. E.</string>
+    <string name="parentesisAbierto">(</string>
+    <string name="parentesisCerrado">)</string>
+    <string name="parentesisCuadrados">[ ]</string>
+    <string name="pi">pi</string>
+    <string name="e">e</string>
 </resources>
